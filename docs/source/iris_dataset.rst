@@ -1,14 +1,14 @@
 Iris Dataset
-=====
+============
 
-.. code:: ipython3
+.. code:: python3
 
     import time
     import os.path
     import requests
     import pandas as pd
 
-.. code:: ipython3
+.. code:: python3
 
     # install DenMune clustering algorithm using pip command from the offecial Python repository, PyPi
     # from https://pypi.org/project/denmune/
@@ -17,7 +17,7 @@ Iris Dataset
     # now import it
     from denmune import DenMune
 
-.. code:: ipython3
+.. code:: python3
 
     dataset = 'iris' # let us take iris dataset as an example
     
@@ -39,7 +39,7 @@ Iris Dataset
         with open(data_path + dataset +  ground_ext + file_ext, 'wb') as f:
             f.write(req.content)       
 
-.. code:: ipython3
+.. code:: python3
 
     # Denmune's Paramaters
     # DenMune(dataset=dataset, k_nearest=n, data_path=data_path, verpose=verpose_mode, show_plot=show_plot, show_noise=show_noise)
@@ -101,7 +101,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_1.png
+.. image:: datasets/iris/output_3_1.png
 
 
 .. parsed-literal::
@@ -116,7 +116,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_3.png
+.. image:: datasets/iris/output_3_3.png
 
 
 .. parsed-literal::
@@ -132,7 +132,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_5.png
+.. image:: datasets/iris/output_3_5.png
 
 
 .. parsed-literal::
@@ -148,7 +148,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_7.png
+.. image:: datasets/iris/output_3_7.png
 
 
 .. parsed-literal::
@@ -164,7 +164,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_9.png
+.. image:: datasets/iris/output_3_9.png
 
 
 .. parsed-literal::
@@ -180,7 +180,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_11.png
+.. image:: datasets/iris/output_3_11.png
 
 
 .. parsed-literal::
@@ -196,7 +196,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_13.png
+.. image:: datasets/iris/output_3_13.png
 
 
 .. parsed-literal::
@@ -212,7 +212,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_15.png
+.. image:: datasets/iris/output_3_15.png
 
 
 .. parsed-literal::
@@ -228,7 +228,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_17.png
+.. image:: datasets/iris/output_3_17.png
 
 
 .. parsed-literal::
@@ -244,7 +244,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_19.png
+.. image:: datasets/iris/output_3_19.png
 
 
 .. parsed-literal::
@@ -260,7 +260,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_21.png
+.. image:: datasets/iris/output_3_21.png
 
 
 .. parsed-literal::
@@ -276,7 +276,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_23.png
+.. image:: datasets/iris/output_3_23.png
 
 
 .. parsed-literal::
@@ -292,7 +292,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_25.png
+.. image:: datasets/iris/output_3_25.png
 
 
 .. parsed-literal::
@@ -308,7 +308,7 @@ Iris Dataset
 
 
 
-.. image:: iris/output_3_27.png
+.. image:: datasets/iris/output_3_27.png
 
 
 .. parsed-literal::
@@ -324,7 +324,7 @@ Iris Dataset
     <Figure size 432x288 with 0 Axes>
 
 
-.. code:: ipython3
+.. code:: python3
 
     # It is time to save the results
     results_path = 'results/'  # change it to whatever you output results to, set it to ''; so it will output to current folder
@@ -332,7 +332,7 @@ Iris Dataset
     df.sort_values(by=['ACC', 'F1', 'NMI', 'ARI'] , ascending=False, inplace=True)   
     df.to_csv(results_path + para_file, index=False, sep='\t', header=True)
 
-.. code:: ipython3
+.. code:: python3
 
     df # it is sorted now and saved
 
