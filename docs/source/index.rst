@@ -14,7 +14,7 @@ User Guide / Tutorial
 ---------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    intro_example
    
@@ -23,7 +23,7 @@ Tutorials and Examples
 -------------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    iris_dataset
    
