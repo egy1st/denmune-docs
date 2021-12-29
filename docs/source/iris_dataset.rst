@@ -107,7 +107,7 @@ Iris Dataset
 .. parsed-literal::
 
     
-     ==================================================================================================== 
+     ================================================================================ 
     
     There are 13 outlier point(s) in black (noise of type-1) represent 9% of total points
     There are 8 weak point(s) in light grey (noise of type-2) represent 5% of total points
@@ -122,7 +122,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 3 :Validity score is: 26 but best score is 26 at k= 3     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0013012886047363281  seconds
     There are 5 outlier point(s) in black (noise of type-1) represent 3% of total points
@@ -138,7 +138,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 4 :Validity score is: 49 but best score is 49 at k= 4     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0016024112701416016  seconds
     There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
@@ -154,7 +154,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 5 :Validity score is: 67 but best score is 67 at k= 5     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0015184879302978516  seconds
     There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
@@ -170,7 +170,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 6 :Validity score is: 84 but best score is 84 at k= 6     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0016658306121826172  seconds
     There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
@@ -186,7 +186,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 7 :Validity score is: 120 but best score is 120 at k= 7     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0016393661499023438  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -202,7 +202,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 8 :Validity score is: 130 but best score is 130 at k= 8     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0018620491027832031  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -218,7 +218,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 9 :Validity score is: 122 but best score is 130 at k= 8     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0017979145050048828  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -234,7 +234,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 10 :Validity score is: 112 but best score is 130 at k= 8     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.00472259521484375  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -250,7 +250,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 11 :Validity score is: 133 but best score is 133 at k= 11     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.006127357482910156  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -266,7 +266,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 12 :Validity score is: 134 but best score is 134 at k= 12     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.004782199859619141  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -282,7 +282,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 13 :Validity score is: 134 but best score is 134 at k= 12     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0021009445190429688  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -298,7 +298,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 14 :Validity score is: 135 but best score is 135 at k= 14     
-     ==================================================================================================== 
+     ================================================================================ 
     
     using NGT, Proximity matrix has been calculated  in:  0.0020799636840820312  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
@@ -314,7 +314,7 @@ Iris Dataset
 .. parsed-literal::
 
     k= 15 :Validity score is: 134 but best score is 135 at k= 14     
-     ==================================================================================================== 
+     ================================================================================ 
     
 
 
