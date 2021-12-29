@@ -10,10 +10,23 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Contents
---------
+User Guide / Tutorial
+---------------------
 
 .. toctree::
+   :maxdepth: 2
 
-   usage
-   api
+   basic_denmune
+   how_to_use_epsilon
+   faq
+
+Tutorials and Examples
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   iris_dataset
+   aggregation_dataset
+   cham_ds4_dataset
+   
