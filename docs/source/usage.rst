@@ -6,23 +6,39 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+Simply install DenMune clustering algorithm using pip command from the official Python repository
+from the shell run the command
 
 .. code-block:: console
+pip install denmune
 
-   (.venv) $ pip install lumache
+from jupyter notebook cell run the command
 
-Creating recipes
-----------------
+.. code-block:: ipython3
+!pip install denmune
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
+.. _how_to_use:
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+
+How to use
+------------
+
+After installing DenMune, you just need to ``import it`` 
+
+.. code-block:: python3
+>>> from denmune import DenMune
+
+.. code-block:: python3
+from denmune import DenMune
+
+.. code-block:: python3
+>>> from denmune import DenMune
+it it okey now
+
+
+Please note that first denmune (the package) in small letters, while the other one(the class itself) has ``D`` and ``M`` in capital case while other letters are small
+
 
 .. autoexception:: lumache.InvalidKindError
 
@@ -30,5 +46,6 @@ For example:
 
 >>> import lumache
 >>> lumache.get_random_ingredients()
+it it okey now
 ['shells', 'gorgonzola', 'parsley']
 
