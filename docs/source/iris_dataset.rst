@@ -1,3 +1,6 @@
+Iris Dataset
+=====
+
 .. code:: ipython3
 
     import time
@@ -98,7 +101,7 @@
 
 
 
-.. image:: output_3_1.png
+.. image:: iris/output_3_1.png
 
 
 .. parsed-literal::
@@ -113,7 +116,7 @@
 
 
 
-.. image:: output_3_3.png
+.. image:: iris/output_3_3.png
 
 
 .. parsed-literal::
@@ -129,7 +132,7 @@
 
 
 
-.. image:: output_3_5.png
+.. image:: iris/output_3_5.png
 
 
 .. parsed-literal::
@@ -145,7 +148,7 @@
 
 
 
-.. image:: output_3_7.png
+.. image:: iris/output_3_7.png
 
 
 .. parsed-literal::
@@ -161,7 +164,7 @@
 
 
 
-.. image:: output_3_9.png
+.. image:: iris/output_3_9.png
 
 
 .. parsed-literal::
@@ -177,7 +180,7 @@
 
 
 
-.. image:: output_3_11.png
+.. image:: iris/output_3_11.png
 
 
 .. parsed-literal::
@@ -193,7 +196,7 @@
 
 
 
-.. image:: output_3_13.png
+.. image:: iris/output_3_13.png
 
 
 .. parsed-literal::
@@ -209,7 +212,7 @@
 
 
 
-.. image:: output_3_15.png
+.. image:: iris/output_3_15.png
 
 
 .. parsed-literal::
@@ -225,7 +228,7 @@
 
 
 
-.. image:: output_3_17.png
+.. image:: iris/output_3_17.png
 
 
 .. parsed-literal::
@@ -241,7 +244,7 @@
 
 
 
-.. image:: output_3_19.png
+.. image:: iris/output_3_19.png
 
 
 .. parsed-literal::
@@ -257,7 +260,7 @@
 
 
 
-.. image:: output_3_21.png
+.. image:: iris/output_3_21.png
 
 
 .. parsed-literal::
@@ -273,7 +276,7 @@
 
 
 
-.. image:: output_3_23.png
+.. image:: iris/output_3_23.png
 
 
 .. parsed-literal::
@@ -289,7 +292,7 @@
 
 
 
-.. image:: output_3_25.png
+.. image:: iris/output_3_25.png
 
 
 .. parsed-literal::
@@ -305,7 +308,7 @@
 
 
 
-.. image:: output_3_27.png
+.. image:: iris/output_3_27.png
 
 
 .. parsed-literal::

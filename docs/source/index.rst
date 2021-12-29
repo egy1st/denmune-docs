@@ -17,8 +17,7 @@ User Guide / Tutorial
    :maxdepth: 2
 
    intro_example
-   how_to_use_epsilon
-   faq
+   
 
 Tutorials and Examples
 -------------------------------------
@@ -26,7 +25,5 @@ Tutorials and Examples
 .. toctree::
    :maxdepth: 2
 
-   example_iris_dataset
-   aggregation_dataset
-   cham_ds4_dataset
+   iris_dataset
    
