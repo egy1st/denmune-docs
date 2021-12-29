@@ -16,7 +16,7 @@ User Guide / Tutorial
 .. toctree::
    :maxdepth: 3
 
-   intro_example
+   installation
    
 
 Tutorials and Examples
