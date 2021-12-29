@@ -26,7 +26,7 @@ Tutorials and Examples
 .. toctree::
    :maxdepth: 2
 
-   iris_dataset
+   example_iris_dataset
    aggregation_dataset
    cham_ds4_dataset
    
