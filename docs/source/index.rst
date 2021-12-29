@@ -16,7 +16,7 @@ User Guide / Tutorial
 .. toctree::
    :maxdepth: 2
 
-   basic_denmune
+   intro_example
    how_to_use_epsilon
    faq
 
