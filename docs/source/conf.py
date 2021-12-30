@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DenMune'
-copyright = '2021, EGY1ST'
+copyright = '2021, Mohamed Abbas'
 author = 'Mohamed Abbas'
 
 release = '0.1'
@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'myst_nb',
 ]
 
 intersphinx_mapping = {
@@ -29,7 +30,17 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
+
 html_theme = 'sphinx_rtd_theme'
+#html_theme = "pydata_sphinx_theme"
+#html_theme = 'sphinx_material'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.ipynb': 'myst-nb',
+    '.myst': 'myst-nb',
+}

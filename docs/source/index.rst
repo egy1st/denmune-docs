@@ -18,7 +18,6 @@ User Guide / Tutorial
 
    installation
    
-   
 
 Tutorials and Examples
 -------------------------------------
@@ -28,4 +27,9 @@ Tutorials and Examples
 
    iris_dataset
    aggregation_dataset
+   chameleon_ds1_dataset
+   chameleon_ds2_dataset
+   chameleon_ds3_dataset
+   chameleon_ds4_dataset
+   
    
