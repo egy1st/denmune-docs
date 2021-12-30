@@ -8,7 +8,13 @@ how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This documentation associated with the paper "DenMune: Density peak based clustering using mutual nearest neighbors"
+   
+   DOI: https://doi.org/10.1016/j.patcog.2020.107589
+   
+   Source code is maintained at https://github.com/egy1st/denmune-clustering-algorithm
+   
+   
 
 User Guide / Tutorial
 ---------------------
@@ -31,5 +37,11 @@ Tutorials and Examples
    chameleon_ds2_dataset
    chameleon_ds3_dataset
    chameleon_ds4_dataset
+   compound_dataset
+   jain_dataset
+   mouse_dataset
+   pathbased_dataset
+   spiral_dataset
+   
    
    
