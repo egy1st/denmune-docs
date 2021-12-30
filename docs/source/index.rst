@@ -23,6 +23,7 @@ User Guide / Tutorial
    :maxdepth: 3
 
    installation
+   test
    
 
 Tutorials and Examples
@@ -42,6 +43,10 @@ Tutorials and Examples
    mouse_dataset
    pathbased_dataset
    spiral_dataset
+   mnist_dataset
+   digits_dataset
+   chars_dataset
+   
    
    
    

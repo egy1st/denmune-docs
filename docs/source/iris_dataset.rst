@@ -1,14 +1,14 @@
 Iris Dataset
-============
+=============
 
-.. code:: python3
+.. code:: ipython3
 
     import time
     import os.path
     import requests
     import pandas as pd
 
-.. code:: python3
+.. code:: ipython3
 
     # install DenMune clustering algorithm using pip command from the offecial Python repository, PyPi
     # from https://pypi.org/project/denmune/
@@ -17,7 +17,7 @@ Iris Dataset
     # now import it
     from denmune import DenMune
 
-.. code:: python3
+.. code:: ipython3
 
     dataset = 'iris' # let us take iris dataset as an example
     
@@ -39,7 +39,7 @@ Iris Dataset
         with open(data_path + dataset +  ground_ext + file_ext, 'wb') as f:
             f.write(req.content)       
 
-.. code:: python3
+.. code:: ipython3
 
     # Denmune's Paramaters
     # DenMune(dataset=dataset, k_nearest=n, data_path=data_path, verpose=verpose_mode, show_plot=show_plot, show_noise=show_noise)
@@ -57,7 +57,7 @@ Iris Dataset
     best_k = 0
     best_val = -1
     
-    validity_idx = 1 # Acc=1, F1-score=2,  NMI=3, AMI=4, ARI=5,  Homogeneity=6, and Completeness=7
+    validity_idx = 2 # Acc=1, F1-score=2,  NMI=3, AMI=4, ARI=5,  Homogeneity=6, and Completeness=7
     df = pd.DataFrame(columns =['K', 'ACC', 'F1', 'NMI', 'AMI', 'ARI','Homogeneity', 'Completeness', 'Time' ])
     
     
@@ -96,7 +96,8 @@ Iris Dataset
 
 .. parsed-literal::
 
-    using NGT, Proximity matrix has been calculated  in:  0.0019257068634033203  seconds
+    using t-SNE iris  dataset has been reduced to 2-d in  0.9025790691375732  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.0011229515075683594  seconds
     Dataset's Groundtruht
 
 
@@ -107,11 +108,11 @@ Iris Dataset
 .. parsed-literal::
 
     
-     ================================================================================ 
+     ==================================================================================================== 
     
-    There are 13 outlier point(s) in black (noise of type-1) represent 9% of total points
+    There are 12 outlier point(s) in black (noise of type-1) represent 8% of total points
     There are 8 weak point(s) in light grey (noise of type-2) represent 5% of total points
-    DenMune detected 25 clusters 
+    DenMune detected 21 clusters 
     
 
 
@@ -121,13 +122,13 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 3 :Validity score is: 26 but best score is 26 at k= 3     
-     ================================================================================ 
+    k= 3 :Validity score is: 0.404561160280075 but best score is 0.404561160280075 at k= 3     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0013012886047363281  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002125263214111328  seconds
     There are 5 outlier point(s) in black (noise of type-1) represent 3% of total points
     There are 10 weak point(s) in light grey (noise of type-2) represent 7% of total points
-    DenMune detected 12 clusters 
+    DenMune detected 11 clusters 
     
 
 
@@ -137,13 +138,13 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 4 :Validity score is: 49 but best score is 49 at k= 4     
-     ================================================================================ 
+    k= 4 :Validity score is: 0.5047316524386208 but best score is 0.5047316524386208 at k= 4     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0016024112701416016  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002331256866455078  seconds
     There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
     There are 9 weak point(s) in light grey (noise of type-2) represent 6% of total points
-    DenMune detected 9 clusters 
+    DenMune detected 8 clusters 
     
 
 
@@ -153,12 +154,12 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 5 :Validity score is: 67 but best score is 67 at k= 5     
-     ================================================================================ 
+    k= 5 :Validity score is: 0.6715841236389182 but best score is 0.6715841236389182 at k= 5     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0015184879302978516  seconds
-    There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
-    There are 5 weak point(s) in light grey (noise of type-2) represent 3% of total points
+    using NGT, Proximity matrix has been calculated  in:  0.0019311904907226562  seconds
+    There are 1 outlier point(s) in black (noise of type-1) represent 1% of total points
+    There are 3 weak point(s) in light grey (noise of type-2) represent 2% of total points
     DenMune detected 7 clusters 
     
 
@@ -169,13 +170,13 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 6 :Validity score is: 84 but best score is 84 at k= 6     
-     ================================================================================ 
+    k= 6 :Validity score is: 0.6824324324324323 but best score is 0.6824324324324323 at k= 6     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0016658306121826172  seconds
-    There are 2 outlier point(s) in black (noise of type-1) represent 1% of total points
-    There are 2 weak point(s) in light grey (noise of type-2) represent 1% of total points
-    DenMune detected 5 clusters 
+    using NGT, Proximity matrix has been calculated  in:  0.001992940902709961  seconds
+    There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
+    There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
+    DenMune detected 6 clusters 
     
 
 
@@ -185,13 +186,13 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 7 :Validity score is: 120 but best score is 120 at k= 7     
-     ================================================================================ 
+    k= 7 :Validity score is: 0.8210198808205451 but best score is 0.8210198808205451 at k= 7     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0016393661499023438  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002408742904663086  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
-    There are 2 weak point(s) in light grey (noise of type-2) represent 1% of total points
-    DenMune detected 4 clusters 
+    There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
+    DenMune detected 5 clusters 
     
 
 
@@ -201,13 +202,13 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 8 :Validity score is: 130 but best score is 130 at k= 8     
-     ================================================================================ 
+    k= 8 :Validity score is: 0.8631068865902525 but best score is 0.8631068865902525 at k= 8     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0018620491027832031  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.0026082992553710938  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
-    There are 2 weak point(s) in light grey (noise of type-2) represent 1% of total points
-    DenMune detected 4 clusters 
+    There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
+    DenMune detected 3 clusters 
     
 
 
@@ -217,12 +218,12 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 9 :Validity score is: 122 but best score is 130 at k= 8     
-     ================================================================================ 
+    k= 9 :Validity score is: 0.89769820971867 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0017979145050048828  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002123594284057617  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
-    There are 2 weak point(s) in light grey (noise of type-2) represent 1% of total points
+    There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 4 clusters 
     
 
@@ -233,12 +234,12 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 10 :Validity score is: 112 but best score is 130 at k= 8     
-     ================================================================================ 
+    k= 10 :Validity score is: 0.8441300570861255 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.00472259521484375  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.0022115707397460938  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
-    There are 2 weak point(s) in light grey (noise of type-2) represent 1% of total points
+    There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 3 clusters 
     
 
@@ -249,10 +250,10 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 11 :Validity score is: 133 but best score is 133 at k= 11     
-     ================================================================================ 
+    k= 11 :Validity score is: 0.89769820971867 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.006127357482910156  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002968311309814453  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
     There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 3 clusters 
@@ -265,10 +266,10 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 12 :Validity score is: 134 but best score is 134 at k= 12     
-     ================================================================================ 
+    k= 12 :Validity score is: 0.89769820971867 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.004782199859619141  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.0023262500762939453  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
     There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 3 clusters 
@@ -281,10 +282,10 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 13 :Validity score is: 134 but best score is 134 at k= 12     
-     ================================================================================ 
+    k= 13 :Validity score is: 0.89769820971867 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0021009445190429688  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.0025136470794677734  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
     There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 3 clusters 
@@ -297,10 +298,10 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 14 :Validity score is: 135 but best score is 135 at k= 14     
-     ================================================================================ 
+    k= 14 :Validity score is: 0.8905309250136836 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
-    using NGT, Proximity matrix has been calculated  in:  0.0020799636840820312  seconds
+    using NGT, Proximity matrix has been calculated  in:  0.002603292465209961  seconds
     There are 0 outlier point(s) in black (noise of type-1) represent 0% of total points
     There are 0 weak point(s) in light grey (noise of type-2) represent 0% of total points
     DenMune detected 3 clusters 
@@ -313,8 +314,8 @@ Iris Dataset
 
 .. parsed-literal::
 
-    k= 15 :Validity score is: 134 but best score is 135 at k= 14     
-     ================================================================================ 
+    k= 15 :Validity score is: 0.89769820971867 but best score is 0.89769820971867 at k= 9     
+     ==================================================================================================== 
     
 
 
@@ -324,15 +325,15 @@ Iris Dataset
     <Figure size 432x288 with 0 Axes>
 
 
-.. code:: python3
+.. code:: ipython3
 
     # It is time to save the results
     results_path = 'results/'  # change it to whatever you output results to, set it to ''; so it will output to current folder
     para_file = 'denmune'+ '_para_'  + dataset + '.csv'
-    df.sort_values(by=['ACC', 'F1', 'NMI', 'ARI'] , ascending=False, inplace=True)   
+    df.sort_values(by=['F1', 'NMI', 'ARI'] , ascending=False, inplace=True)   
     df.to_csv(results_path + para_file, index=False, sep='\t', header=True)
 
-.. code:: python3
+.. code:: ipython3
 
     df # it is sorted now and saved
 
@@ -372,8 +373,8 @@ Iris Dataset
       </thead>
       <tbody>
         <tr>
-          <th>11</th>
-          <td>14.0</td>
+          <th>6</th>
+          <td>9.0</td>
           <td>135.0</td>
           <td>0.897698</td>
           <td>0.797989</td>
@@ -381,155 +382,154 @@ Iris Dataset
           <td>0.745504</td>
           <td>0.786923</td>
           <td>0.809369</td>
-          <td>0.025140</td>
-        </tr>
-        <tr>
-          <th>9</th>
-          <td>12.0</td>
-          <td>134.0</td>
-          <td>0.890531</td>
-          <td>0.790679</td>
-          <td>0.788012</td>
-          <td>0.732298</td>
-          <td>0.778177</td>
-          <td>0.803589</td>
-          <td>0.029522</td>
-        </tr>
-        <tr>
-          <th>10</th>
-          <td>13.0</td>
-          <td>134.0</td>
-          <td>0.890531</td>
-          <td>0.790679</td>
-          <td>0.788012</td>
-          <td>0.732298</td>
-          <td>0.778177</td>
-          <td>0.803589</td>
-          <td>0.027311</td>
-        </tr>
-        <tr>
-          <th>12</th>
-          <td>15.0</td>
-          <td>134.0</td>
-          <td>0.890531</td>
-          <td>0.790679</td>
-          <td>0.788012</td>
-          <td>0.732298</td>
-          <td>0.778177</td>
-          <td>0.803589</td>
-          <td>0.022892</td>
+          <td>0.023523</td>
         </tr>
         <tr>
           <th>8</th>
           <td>11.0</td>
-          <td>133.0</td>
-          <td>0.891029</td>
-          <td>0.779845</td>
-          <td>0.775379</td>
-          <td>0.730006</td>
-          <td>0.790165</td>
-          <td>0.769792</td>
-          <td>0.022020</td>
+          <td>135.0</td>
+          <td>0.897698</td>
+          <td>0.797989</td>
+          <td>0.795421</td>
+          <td>0.745504</td>
+          <td>0.786923</td>
+          <td>0.809369</td>
+          <td>0.024874</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td>12.0</td>
+          <td>135.0</td>
+          <td>0.897698</td>
+          <td>0.797989</td>
+          <td>0.795421</td>
+          <td>0.745504</td>
+          <td>0.786923</td>
+          <td>0.809369</td>
+          <td>0.023519</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>13.0</td>
+          <td>135.0</td>
+          <td>0.897698</td>
+          <td>0.797989</td>
+          <td>0.795421</td>
+          <td>0.745504</td>
+          <td>0.786923</td>
+          <td>0.809369</td>
+          <td>0.026462</td>
+        </tr>
+        <tr>
+          <th>12</th>
+          <td>15.0</td>
+          <td>135.0</td>
+          <td>0.897698</td>
+          <td>0.797989</td>
+          <td>0.795421</td>
+          <td>0.745504</td>
+          <td>0.786923</td>
+          <td>0.809369</td>
+          <td>0.028596</td>
+        </tr>
+        <tr>
+          <th>11</th>
+          <td>14.0</td>
+          <td>134.0</td>
+          <td>0.890531</td>
+          <td>0.790679</td>
+          <td>0.788012</td>
+          <td>0.732298</td>
+          <td>0.778177</td>
+          <td>0.803589</td>
+          <td>0.027658</td>
         </tr>
         <tr>
           <th>5</th>
           <td>8.0</td>
-          <td>130.0</td>
-          <td>0.920343</td>
-          <td>0.820395</td>
-          <td>0.816057</td>
-          <td>0.817625</td>
-          <td>0.922692</td>
-          <td>0.738517</td>
-          <td>0.016305</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td>9.0</td>
-          <td>122.0</td>
-          <td>0.835264</td>
-          <td>0.736792</td>
-          <td>0.730139</td>
-          <td>0.678943</td>
-          <td>0.799032</td>
-          <td>0.683547</td>
-          <td>0.016929</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td>7.0</td>
           <td>120.0</td>
-          <td>0.868994</td>
-          <td>0.797335</td>
-          <td>0.790210</td>
-          <td>0.776531</td>
-          <td>0.963419</td>
-          <td>0.680094</td>
-          <td>0.094015</td>
+          <td>0.863107</td>
+          <td>0.789928</td>
+          <td>0.785268</td>
+          <td>0.774596</td>
+          <td>0.922431</td>
+          <td>0.690710</td>
+          <td>0.020778</td>
         </tr>
         <tr>
           <th>7</th>
           <td>10.0</td>
-          <td>112.0</td>
-          <td>0.838612</td>
-          <td>0.725948</td>
-          <td>0.719470</td>
-          <td>0.671153</td>
-          <td>0.830880</td>
-          <td>0.644547</td>
-          <td>0.027200</td>
+          <td>113.0</td>
+          <td>0.844130</td>
+          <td>0.737834</td>
+          <td>0.733401</td>
+          <td>0.679531</td>
+          <td>0.827620</td>
+          <td>0.665622</td>
+          <td>0.023621</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>7.0</td>
+          <td>108.0</td>
+          <td>0.821020</td>
+          <td>0.736204</td>
+          <td>0.729306</td>
+          <td>0.659476</td>
+          <td>0.922431</td>
+          <td>0.612540</td>
+          <td>0.021180</td>
         </tr>
         <tr>
           <th>3</th>
           <td>6.0</td>
-          <td>84.0</td>
-          <td>0.715190</td>
-          <td>0.681570</td>
-          <td>0.669026</td>
-          <td>0.493952</td>
-          <td>0.963419</td>
-          <td>0.527306</td>
-          <td>0.014004</td>
+          <td>78.0</td>
+          <td>0.682432</td>
+          <td>0.675962</td>
+          <td>0.663360</td>
+          <td>0.477823</td>
+          <td>0.951927</td>
+          <td>0.524042</td>
+          <td>0.020106</td>
         </tr>
         <tr>
           <th>2</th>
           <td>5.0</td>
-          <td>67.0</td>
-          <td>0.616738</td>
-          <td>0.592427</td>
-          <td>0.574010</td>
-          <td>0.359015</td>
-          <td>0.911344</td>
-          <td>0.438854</td>
-          <td>0.014182</td>
+          <td>76.0</td>
+          <td>0.671584</td>
+          <td>0.625789</td>
+          <td>0.609812</td>
+          <td>0.433304</td>
+          <td>0.920773</td>
+          <td>0.473951</td>
+          <td>0.075269</td>
         </tr>
         <tr>
           <th>1</th>
           <td>4.0</td>
-          <td>49.0</td>
-          <td>0.487165</td>
-          <td>0.532330</td>
-          <td>0.505790</td>
-          <td>0.264754</td>
-          <td>0.881604</td>
-          <td>0.381276</td>
-          <td>0.014421</td>
+          <td>52.0</td>
+          <td>0.504732</td>
+          <td>0.534538</td>
+          <td>0.509955</td>
+          <td>0.287688</td>
+          <td>0.866648</td>
+          <td>0.386447</td>
+          <td>0.018903</td>
         </tr>
         <tr>
           <th>0</th>
           <td>3.0</td>
-          <td>26.0</td>
-          <td>0.295019</td>
-          <td>0.434869</td>
-          <td>0.373416</td>
-          <td>0.103594</td>
-          <td>0.850955</td>
-          <td>0.292062</td>
-          <td>0.074632</td>
+          <td>39.0</td>
+          <td>0.404561</td>
+          <td>0.460335</td>
+          <td>0.408779</td>
+          <td>0.166681</td>
+          <td>0.847152</td>
+          <td>0.316032</td>
+          <td>0.970442</td>
         </tr>
       </tbody>
     </table>
     </div>
-
 
 
