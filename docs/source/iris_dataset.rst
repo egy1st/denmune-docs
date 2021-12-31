@@ -1,6 +1,30 @@
 Iris Dataset
 =============
 
+:Description: This is perhaps the best known database to be found in the pattern recognition literature. The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.
+:Challenge:  One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.
+
+About it
+------------------
+:Name: iris dataset
+:Dataset URL: https://archive.ics.uci.edu/ml/datasets/iris
+:Number of Instances: 150
+:Predicted attribute: class of iris plant.
+:Classes [3]: 
+	- Iris Setosa
+	- Iris Versicolour
+	- Iris Virginica
+:Attributes [4]:
+	- sepal length in cm
+	- sepal width in cm
+	- petal length in cm
+	- petal width in cm	
+
+.. image:: images/iris/iris01. * 
+.. image:: images/iris/iris02. * 
+
+Code it
+------------------
 .. code:: ipython3
 
     import time
@@ -94,12 +118,13 @@ Iris Dataset
             print('\n', "=====" * 20 , '\n')
 
 
+Visualize it
+------------------
 .. parsed-literal::
 
     using t-SNE iris  dataset has been reduced to 2-d in  0.9025790691375732  seconds
     using NGT, Proximity matrix has been calculated  in:  0.0011229515075683594  seconds
     Dataset's Groundtruht
-
 
 
 .. image:: datasets/iris/output_3_1.png
@@ -318,12 +343,8 @@ Iris Dataset
      ==================================================================================================== 
     
 
-
-
-.. parsed-literal::
-
-    <Figure size 432x288 with 0 Axes>
-
+Assess it
+------------------
 
 .. code:: ipython3
 
@@ -336,7 +357,6 @@ Iris Dataset
 .. code:: ipython3
 
     df # it is sorted now and saved
-
 
 
 
