@@ -30,7 +30,7 @@ Tutorials and Examples
 -------------------------------------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    iris_dataset
    aggregation_dataset
@@ -46,6 +46,16 @@ Tutorials and Examples
    mnist_dataset
    digits_dataset
    chars_dataset
+   a1_dataset
+   a2_dataset
+   s1_dataset
+   s2_dataset
+   r15_dataset
+   d31_dataset
+   unbalance_dataset
+   clusterable_dataset
+   flame_dataset
+   
    
    
    

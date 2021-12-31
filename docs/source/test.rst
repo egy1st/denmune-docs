@@ -1,31 +1,35 @@
-Usage
+Test
 =====
 
-.. _installation:
+Section 1
+----------
 
-Installation
-------------
-Simply install DenMune clustering algorithm using pip command from the official Python repository
-from the shell run the command
+:fieldname: Field content
 
->>> pip install denmune
+Section 2
+----------
 
-from jupyter notebook cell run the command
+.. code-block::
+   :caption: A cool example
 
->>> !pip install denmune
+       The output of this line starts with four spaces.
 
+.. code-block::
 
-.. _how_to_use:
+       The output of this line has no spaces at the beginning.
 
-How to use
-------------
-After installing DenMune, ``you just need to import it`` 
+	   
+	   
 
->>> from denmune import DenMune
+Section 3
+----------
+A cool bit of code::
 
-.. note::
+   Some cool Code
 
-	Please note that first ``denmune`` (the package) is in small letters, while ``DenMune`` (the class itself) has ``D`` and ``M`` in capital case while other letters are small.
+.. code-block:: rst
 
+   A bit of **rst** which should be *highlighted* properly.
 
+   
 
