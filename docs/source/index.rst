@@ -47,6 +47,12 @@ Real Datasets
    glass_dataset
    seeds_dataset
    yeast_dataset
+   appendicitis_dataset
+   arcene_dataset
+   breast_dataset
+   move_dataset
+   robot2d_dataset
+   wdbc_dataset
    
    
    
