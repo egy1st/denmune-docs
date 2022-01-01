@@ -42,6 +42,11 @@ Real Datasets
    digits_dataset
    chars_dataset
    mnist_dataset
+   ecoli_dataset
+   scc_dataset
+   glass_dataset
+   seeds_dataset
+   yeast_dataset
    
    
    
@@ -59,7 +64,6 @@ Synthestic Datasets
    r15_dataset
    d31_dataset
    unbalance_dataset
-   clusterable_dataset
    flame_dataset
    compound_dataset
    jain_dataset
@@ -76,8 +80,8 @@ Synthestic Datasets
   
    
 
-Chameleon's Datasets
-----------------------
+Intutive Datasets (not-labeled)
+------------------------------------
    
 .. toctree::
    :maxdepth: 1
@@ -86,3 +90,4 @@ Chameleon's Datasets
    chameleon_ds2_dataset
    chameleon_ds3_dataset
    chameleon_ds4_dataset
+   clusterable_dataset

@@ -17,28 +17,6 @@ Clusterable Dataset
     from denmune import DenMune
 
 
-.. parsed-literal::
-
-    Defaulting to user installation because normal site-packages is not writeable
-    Requirement already satisfied: denmune in /home/jupyter-admin/.local/lib/python3.7/site-packages (0.0.3.8)
-    Requirement already satisfied: pandas>=1.0.3 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (1.0.3)
-    Requirement already satisfied: anytree>=2.8.0 in /home/jupyter-admin/.local/lib/python3.7/site-packages (from denmune) (2.8.0)
-    Requirement already satisfied: seaborn>=0.10.1 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (0.10.1)
-    Requirement already satisfied: scikit-learn>=0.22.1 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (0.22.1)
-    Requirement already satisfied: matplotlib>=3.2.1 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (3.2.1)
-    Requirement already satisfied: numpy>=1.18.5 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (1.18.5)
-    Requirement already satisfied: ngt>=1.11.6 in /opt/tljh/user/lib/python3.7/site-packages (from denmune) (1.11.6)
-    Requirement already satisfied: six>=1.9.0 in /opt/tljh/user/lib/python3.7/site-packages (from anytree>=2.8.0->denmune) (1.12.0)
-    Requirement already satisfied: cycler>=0.10 in /opt/tljh/user/lib/python3.7/site-packages (from matplotlib>=3.2.1->denmune) (0.10.0)
-    Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /opt/tljh/user/lib/python3.7/site-packages (from matplotlib>=3.2.1->denmune) (2.4.7)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /opt/tljh/user/lib/python3.7/site-packages (from matplotlib>=3.2.1->denmune) (1.2.0)
-    Requirement already satisfied: python-dateutil>=2.1 in /opt/tljh/user/lib/python3.7/site-packages (from matplotlib>=3.2.1->denmune) (2.8.1)
-    Requirement already satisfied: pybind11 in /opt/tljh/user/lib/python3.7/site-packages (from ngt>=1.11.6->denmune) (2.5.0)
-    Requirement already satisfied: pytz>=2017.2 in /opt/tljh/user/lib/python3.7/site-packages (from pandas>=1.0.3->denmune) (2020.1)
-    Requirement already satisfied: joblib>=0.11 in /opt/tljh/user/lib/python3.7/site-packages (from scikit-learn>=0.22.1->denmune) (0.15.1)
-    Requirement already satisfied: scipy>=0.17.0 in /opt/tljh/user/lib/python3.7/site-packages (from scikit-learn>=0.22.1->denmune) (1.4.1)
-
-
 .. code:: ipython3
 
     dataset = 'clusterable' # let us take Chameleon DS1 dataset as an example
