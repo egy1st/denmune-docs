@@ -17,83 +17,68 @@ how to :ref:`installation` the algorithm and use it.
    
    
 
-User Guide / Tutorial
+User Guide / Tutorials
 ------------------------
 
 .. toctree::
-   :maxdepth: 2
-
-   installation
+   :maxdepth: 3
   
-
-Tutorials and Examples
-----------------------------
-
-.. toctree::
-   :maxdepth: 1
-
+   
+   README
+   installation
+   
+  
 Real Datasets
 ----------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
-   iris_dataset
-   digits_dataset
-   chars_dataset
-   mnist_dataset
-   ecoli_dataset
-   scc_dataset
-   glass_dataset
-   seeds_dataset
-   yeast_dataset
-   appendicitis_dataset
-   arcene_dataset
-   breast_dataset
-   move_dataset
-   robot2d_dataset
-   wdbc_dataset
+   examples/iris_dataset
+   examples/seeds_dataset
+   examples/mnist_dataset
    
-   
+     
    
 Synthestic Datasets
 -------------------
    
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
-   aggregation_dataset
-   a1_dataset
-   a2_dataset
-   s1_dataset
-   s2_dataset
-   r15_dataset
-   d31_dataset
-   unbalance_dataset
-   flame_dataset
-   compound_dataset
-   jain_dataset
-   mouse_dataset
-   pathbased_dataset
-   spiral_dataset
-   dim032_dataset
-   dim128_dataset
-   dim512_dataset
-   g2-2-10_dataset
-   g2-2-30_dataset
-   g2-2-50_dataset
-   varydensity_dataset
-  
+   examples/aggregation_dataset  
+   examples/jain_dataset
+   examples/flame_dataset
+   examples/compound_dataset
+   examples/vary_density_dataset
+   examples/unbalance_dataset
+   examples/spiral_dataset
+   examples/pathbased_dataset
+   examples/mouse_dataset
    
-
+ 
 Intutive Datasets (not-labeled)
 ------------------------------------
    
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
-   chameleon_ds1_dataset
-   chameleon_ds2_dataset
-   chameleon_ds3_dataset
-   chameleon_ds4_dataset
-   clusterable_dataset
+   examples/chameleon_ds1_dataset
+   examples/chameleon_ds2_dataset
+   examples/chameleon_ds3_dataset
+   examples/chameleon_ds4_dataset
+   examples/clusterable_dataset
+   
+   
+Parameteric Synthestic Datasets
+----------------------------------
+   
+.. toctree::
+   :maxdepth: 2
+   
+   examples/make_blobs_dataset
+   examples/make_moons_dataset
+   examples/make_circles_dataset
+   examples/make_classification_dataset
+   examples/make_gaussian_quantiles_dataset
+   
