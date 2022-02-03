@@ -4,9 +4,6 @@ Welcome to DenMune's documentation!
 DenMune Clustering Algorithm
 	A clustering algorithm that can find clusters of arbitrary size, shapes and densities in two-dimensions. Higher dimensions are first reduced to 2-D using the t-sne. The algorithm relies on a single parameter K (the number of nearest neighbors). The results show the superiority of DenMune. Enjoy the simplicty but the power of DenMune.
 
-Check out the :doc:`installation` section for further information, including
-how to :ref:`installation` the algorithm and use it.
-
 .. note::
 
    This documentation associated with the paper "DenMune: Density peak based clustering using mutual nearest neighbors"
@@ -54,11 +51,12 @@ Characteristics
    
    
 Participate in Competitions
-----------------
+-----------------------------
 
 .. toctree::
    :maxdepth: 2
    
+   kaggle/validation
    kaggle/training_MNIST
    kaggle/Get_97_by_training_MNIST_dataset
  

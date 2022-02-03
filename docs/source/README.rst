@@ -354,6 +354,26 @@ noisy data   clean data
 |noisy data| |clean data|
 ============ ============
 
+Validatation
+------------------
+
+You can get your validation results using 3 methods
+
+- by showing the Analyzer
+- extract values from the validity returned list from fit_predict function
+- extract values from the Analyzer dictionary
+
+There are  five validity measures built-in the algorithm, which are:
+
+- ACC, Accuracy
+- F1 score
+- NMI index (Normalized Mutual Information)
+- AMI index (Adjusted Mutual Information)
+- ARI index (Adjusted Rand Index)
+
+|Validation snapshot|
+
+
 K-nearest Evolution
 -------------------
 
@@ -390,7 +410,7 @@ data size: 85000  time: 251.7625 seconds
 data size: 100000 time: 257.563 seconds
 ================= ======================
 
-\| |noisy data chart|
+|noisy data chart|
 
 The Stability
 -------------
@@ -494,6 +514,8 @@ Launch each Example in Kaggle workspace
    +----------------------------------+----------------------------------+
    | Noise detection - kaggle         | |Noise detection - kaggle|       |
    +----------------------------------+----------------------------------+
+   | Validation - kaggle              | |Validation - kaggle| |          |
+   +----------------------------------+----------------------------------+
    | The beauty of propagation -      | |The beauty of propagation -     |
    | kaggle                           | kaggle|                          |
    +----------------------------------+----------------------------------+
@@ -543,6 +565,8 @@ Launch each Example in Google Research, CoLab
    |                                  | colab|                           |
    +----------------------------------+----------------------------------+
    | Noise detection - colab          | |Noise detection - colab|        |
+   +----------------------------------+----------------------------------+
+   | validation - colab               | |validation - colab|             |
    +----------------------------------+----------------------------------+
    | How it propagates - colab        | |How it propagates - colab|      |
    +----------------------------------+----------------------------------+
@@ -693,3 +717,10 @@ Task List
    :target: https://colab.research.google.com/drive/17VgVRMFBWvkSIH1yA3tMl6UQ7Eu68K2l?usp=sharing
 .. |k-nearest-evolution - colab| image:: https://colab.research.google.com/assets/colab-badge.svg
    :target: https://colab.research.google.com/drive/1DZ-CQPV3WwJSiaV3-rjwPwmXw4RUh8Qj
+.. |Validation - kaggle|  image:: https://kaggle.com/static/images/open-in-kaggle.svg
+   :target: https://www.kaggle.com/egyfirst/validate-in-5-built-in-validity-insexes
+.. |Validation - colab|  image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/drive/13_EVaQOv_QiNmQiMWJAcFFHPJHGCrQLe
+.. |validation snapshot|  image:: https://raw.githubusercontent.com/egy1st/images/main/clustering/validation.png    
+
+
