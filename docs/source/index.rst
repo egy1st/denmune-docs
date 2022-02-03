@@ -25,60 +25,41 @@ User Guide / Tutorials
   
    
    README
-   installation
-   
-  
-Real Datasets
+
+
+Examples
 ----------------
 
 .. toctree::
    :maxdepth: 2
    
    examples/iris_dataset
-   examples/seeds_dataset
-   examples/mnist_dataset
+   examples/chameleon_datasets
+   examples/2D_shapes_datasets
+   examples/MNIST_dataset
    
-     
-   
-Synthestic Datasets
--------------------
-   
+  
+Characteristics
+----------------
+
 .. toctree::
    :maxdepth: 2
    
-   examples/aggregation_dataset  
-   examples/jain_dataset
-   examples/flame_dataset
-   examples/compound_dataset
-   examples/vary_density_dataset
-   examples/unbalance_dataset
-   examples/spiral_dataset
-   examples/pathbased_dataset
-   examples/mouse_dataset
+   characteristics/noise_detection
+   characteristics/clustering_propagation
+   characteristics/clustering_propagation_snapshots
+   characteristics/scalability_and_speed
+   characteristics/stability_vs_knn
+   characteristics/k_nearest_evolution
    
+   
+Participate in Competitions
+----------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   kaggle/training_MNIST
+   kaggle/Get_97_by_training_MNIST_dataset
  
-Intutive Datasets (not-labeled)
-------------------------------------
-   
-.. toctree::
-   :maxdepth: 2
-   
-   examples/chameleon_ds1_dataset
-   examples/chameleon_ds2_dataset
-   examples/chameleon_ds3_dataset
-   examples/chameleon_ds4_dataset
-   examples/clusterable_dataset
-   
-   
-Parameteric Synthestic Datasets
-----------------------------------
-   
-.. toctree::
-   :maxdepth: 2
-   
-   examples/make_blobs_dataset
-   examples/make_moons_dataset
-   examples/make_circles_dataset
-   examples/make_classification_dataset
-   examples/make_gaussian_quantiles_dataset
-   
+  

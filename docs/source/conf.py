@@ -19,6 +19,12 @@ extensions = [
     'sphinx.ext.intersphinx',
 ]
 
+# Grouping the document tree into PDF files. List of tuples
+# (source start file, target name, title, author, options).
+pdf_documents = [
+    ('index', 'MyProject', 'My Project', 'Author Name'),
+]
+
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
