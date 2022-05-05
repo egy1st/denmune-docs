@@ -1,0 +1,31 @@
+site_name: ZeroBytes
+site_url: https://www.zerobytes.one/
+repo_url: https://github.com/egy1st/zerobytes-mkdocs
+copyright: These bytes offered to you by Mohamed Abbas
+
+nav:
+    - Home: index.md
+    - Machine Learning: ml/index.md
+    - Courses: courses/index.md
+    - Dynamic Components: dc/index.md
+    - Certificates: certificates/index.md
+    - About: about.md
+    
+site_dir: public
+edit_uri: edit/main/docs/
+    
+theme:
+    name: mkdocs
+    nav_style: primary
+    locale: en
+    include_sidebar: true
+    collapse_navigation: false
+    
+    
+markdown_extensions:
+  - toc
+  - abbr
+  - admonition
+  - attr_list
+  - toc
+    
