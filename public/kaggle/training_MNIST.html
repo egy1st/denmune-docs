@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trining MNIST Dataset &mdash; DenMune 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Become a Kaggler: Get 97% on MNIST Dataset" href="Get_97_by_training_MNIST_dataset.html" />
+    <link rel="prev" title="Validate Your Results" href="validation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> DenMune
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">DenMune: A density-peak clustering algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#installation-and-usage">Installation and Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#loading-data">Loading data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#algorithm-s-parameters">Algorithm’s Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#how-to-run-and-test">How to Run and Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#how-to-cite">How to cite</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/iris_dataset.html">Iris Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/chameleon_datasets.html">Chameleon Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/2D_shapes_datasets.html">2D Shapes Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/MNIST_dataset.html">MNIST Dataset</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/noise_detection.html">Noise Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/clustering_propagation.html">Clustering Propagation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/clustering_propagation_snapshots.html">Clustering Propagation Snapshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/scalability_and_speed.html">Scalability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/stability_vs_knn.html">Stability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../characteristics/k_nearest_evolution.html">K-nearest Neighbor Evolution</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="validation.html">Validate Your Results</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trining MNIST Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Get_97_by_training_MNIST_dataset.html">Become a Kaggler: Get 97% on MNIST Dataset</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DenMune</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Trining MNIST Dataset</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kaggle/training_MNIST.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="trining-mnist-dataset">
+<h1>Trining MNIST Dataset<a class="headerlink" href="#trining-mnist-dataset" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># install DenMune clustering algorithm using pip command from the offecial Python repository, PyPi
+# from https://pypi.org/project/denmune/
+!pip install denmune
+
+# then import it
+from denmune import DenMune
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># clone datasets from our repository datasets
+if not os.path.exists(&#39;datasets&#39;):
+  !git clone https://github.com/egy1st/datasets
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;datasets&#39;...
+remote: Enumerating objects: 63, done.[K
+remote: Counting objects: 100% (63/63), done.[K
+remote: Compressing objects: 100% (52/52), done.[K
+remote: Total 63 (delta 10), reused 59 (delta 9), pack-reused 0[K
+Unpacking objects: 100% (63/63), done.
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># let us train the dataset</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;datasets/denmune/mnist/&#39;</span>
+<span class="n">file_2d</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;mnist-2d.csv&#39;</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;train.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s1">&#39;test.csv&#39;</span><span class="p">,</span>  <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">validity_key</span> <span class="o">=</span> <span class="s2">&quot;F1&quot;</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">best_knn</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">best_score</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">knn</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>   <span class="c1"># knn ==&gt; k-nearest neighbor, the only parameter required by the algorithm</span>
+  <span class="n">dm</span> <span class="o">=</span> <span class="n">DenMune</span><span class="p">(</span><span class="n">train_data</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
+              <span class="n">train_truth</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span>
+              <span class="n">test_data</span><span class="o">=</span><span class="n">X_test</span><span class="p">,</span>
+              <span class="n">k_nearest</span><span class="o">=</span><span class="n">knn</span><span class="p">,</span>
+              <span class="n">file_2d</span><span class="o">=</span><span class="n">file_2d</span><span class="p">,</span>
+              <span class="n">rgn_tsne</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+  <span class="n">labels</span><span class="p">,</span> <span class="n">validity</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">show_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_analyzer</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="n">validity</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">][</span><span class="n">validity_key</span><span class="p">]</span>
+
+  <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="n">best_score</span><span class="p">:</span>
+    <span class="n">best_score</span> <span class="o">=</span> <span class="n">score</span>
+    <span class="n">best_knn</span> <span class="o">=</span> <span class="n">knn</span>
+
+  <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;k=&#39;</span> <span class="p">,</span> <span class="n">knn</span><span class="p">,</span> <span class="n">validity_key</span> <span class="p">,</span> <span class="s1">&#39;score:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">score</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;%, best score:&#39;</span><span class="p">,</span>  <span class="nb">round</span><span class="p">(</span><span class="n">best_score</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;</span><span class="si">% a</span><span class="s1">t k=&#39;</span><span class="p">,</span> <span class="n">best_knn</span><span class="p">)</span>
+  <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">knn</span><span class="p">,</span> <span class="n">score</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">=</span> <span class="mi">10</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">88.92</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">88.92</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">10</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">11</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">90.14</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">90.14</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">11</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">12</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">90.97</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">90.97</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">12</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">13</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">91.97</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">91.97</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">13</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">14</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.3</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.3</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">14</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">15</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.58</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.58</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">15</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">16</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">91.77</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.58</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">15</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">17</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.07</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.07</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">17</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">18</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">92.89</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.07</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">17</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">19</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">93.7</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.07</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">17</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">20</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.57</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.57</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">20</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">21</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">80.54</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.57</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">20</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">22</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">93.18</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.57</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">20</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">23</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.91</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.91</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">23</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">24</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.43</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">94.91</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">23</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">25</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">26</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">93.68</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">27</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">93.09</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">28</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">83.83</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">29</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">83.42</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">30</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.41</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">31</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">76.45</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">32</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">65.25</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">33</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">64.28</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">34</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">64.12</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">35</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">73.24</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">36</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">74.07</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">37</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.26</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">95.1</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">25</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">38</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.14</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.14</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">38</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">39</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">40</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">85.34</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">41</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">72.7</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">42</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">85.17</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">43</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">85.19</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">44</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">85.46</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">45</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.78</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">46</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.55</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">47</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.47</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.16</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">39</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">48</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.22</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.22</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">48</span>
+<span class="n">k</span><span class="o">=</span> <span class="mi">49</span> <span class="n">F1</span> <span class="n">score</span><span class="p">:</span> <span class="mf">84.11</span> <span class="o">%</span><span class="p">,</span> <span class="n">best</span> <span class="n">score</span><span class="p">:</span> <span class="mf">96.22</span> <span class="o">%</span> <span class="n">at</span> <span class="n">k</span><span class="o">=</span> <span class="mi">48</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># now let us use our best_knn which corresponds to best_score for our test data prediction</span>
+<span class="c1">#best_knn ==&gt; 48</span>
+
+<span class="n">dm</span> <span class="o">=</span> <span class="n">DenMune</span><span class="p">(</span><span class="n">train_data</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
+              <span class="n">train_truth</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span>
+              <span class="n">test_data</span><span class="o">=</span><span class="n">X_test</span><span class="p">,</span>
+              <span class="n">k_nearest</span><span class="o">=</span><span class="n">best_knn</span><span class="p">,</span>
+              <span class="n">file_2d</span><span class="o">=</span><span class="n">file_2d</span><span class="p">,</span>
+              <span class="n">rgn_tsne</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">labels</span><span class="p">,</span> <span class="n">validity</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_analyzer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Plotting</span> <span class="n">dataset</span> <span class="n">Groundtruth</span>
+</pre></div>
+</div>
+<img alt="../_images/output_5_18.png" src="../_images/output_5_18.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Plotting</span> <span class="n">train</span> <span class="n">data</span>
+</pre></div>
+</div>
+<img alt="../_images/output_5_34.png" src="../_images/output_5_34.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Validating train data
+├── exec_time
+│   ├── DenMune: 95.723
+│   ├── NGT: 8.561
+│   └── t_SNE: 0
+├── n_clusters
+│   ├── actual: 10
+│   └── detected: 11
+├── n_points
+│   ├── dim: 784
+│   ├── noise
+│   │   ├── type-1: 5
+│   │   └── type-2: 0
+│   ├── plot_size: 42000
+│   ├── size: 70000
+│   ├── strong: 37447
+│   └── weak
+│       ├── all: 32553
+│       ├── failed to merge: 0
+│       └── succeeded to merge: 32553
+└── validity
+    └── train
+        ├── ACC: 40386
+        ├── AMI: 0.905
+        ├── ARI: 0.919
+        ├── F1: 0.962
+        ├── NMI: 0.905
+        ├── completeness: 0.904
+        └── homogeneity: 0.906
+
+Plotting test data
+</pre></div>
+</div>
+<img alt="../_images/output_5_54.png" src="../_images/output_5_54.png" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepare our output to be submitted to the dataset kaggle competition</span>
+<span class="n">ImageID</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">Out</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">ImageID</span><span class="p">,</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">Out</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;submission.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;ImageId&#39;</span><span class="p">,</span> <span class="s1">&#39;Label&#39;</span> <span class="p">],</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="validation.html" class="btn btn-neutral float-left" title="Validate Your Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Get_97_by_training_MNIST_dataset.html" class="btn btn-neutral float-right" title="Become a Kaggler: Get 97% on MNIST Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mohamed Abbas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
