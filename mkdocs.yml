@@ -1,15 +1,15 @@
-site_name: ZeroBytes
-site_url: https://www.zerobytes.one/
-repo_url: https://github.com/egy1st/zerobytes-mkdocs
-copyright: These bytes offered to you by Mohamed Abbas
+site_name: DenMune Docs
+site_url: https://www.docs.zerobytes.one/
+repo_url: https://github.com/egy1st/denmune-docs
+copyright: An open source clustering algorithm  offered to you by Mohamed Abbas
 
 nav:
     - Home: index.md
-    - Machine Learning: ml/index.md
-    - Courses: courses/index.md
-    - Dynamic Components: dc/index.md
-    - Certificates: certificates/index.md
-    - About: about.md
+    - Installation: installation.md
+    - Kaggle: kaggle/index.md
+    - Examples: examples/index.md
+    - Characteristics: characteristics/index.md
+   
     
 site_dir: public
 edit_uri: edit/main/docs/
