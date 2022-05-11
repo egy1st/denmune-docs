@@ -64,12 +64,17 @@ labels, validity = dm.fit_predict(show_noise=True, show_analyzer=True)
 ```
 
 
-### Dataset: aggregation Plotting dataset Groundtruth
+Dataset: aggregation
+===================
+
+Plotting dataset Groundtruth
+-----------------------
 
 ![image](images/validation/output_5_1.png)
 
 
-### Plotting train data
+Plotting train data
+-----------------------------
 
 ![image](images/validation/output_5_3.png)
 
@@ -88,7 +93,6 @@ dm = DenMune(train_data=X_train, train_truth=y_train, k_nearest=knn, rgn_tsne=Fa
 labels, validity = dm.fit_predict(show_plots=False, show_noise=True, show_analyzer=False)
 validity
 ```
-
 
 
 >  {\'train\': {\'ACC\': 785, :   \'AMI\': 0.9880984055236919, \'ARI\': 0.9927076502018027, \'F1\':
@@ -111,7 +115,6 @@ print ('AMI index:', round(AMI*100,2), '%')
 ARI = validity['train']['ARI']
 print ('ARI index:', round(ARI*100,2), '%')
 ```
-
 
 
 > Accuracy: 785 correctly identified points F1 score: 99.62 % NMI index:
@@ -153,7 +156,5 @@ print ('ARI index:', round(ARI*100,2), '%')
 ```
 
 
-
 > Accuracy: 785 correctly identified points F1 score: 99.62 % NMI index:
 > 98.83 % AMI index: 98.81 % ARI index: 99.27 %
-> 

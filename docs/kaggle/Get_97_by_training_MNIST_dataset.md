@@ -1,5 +1,5 @@
 Become a Kaggler: Get 97% on MNIST Dataset
-==========================================
+=====================================
 
 ``` {.python}
 import pandas as pd
@@ -166,14 +166,18 @@ labels, validity = dm.fit_predict(show_plots=True, show_analyzer=True)
 ```
 
 
+Dataset: MNIST
+========
 
-> ### Plotting dataset Groundtruth
+Plotting  Groundtruth
+--------
 
 ![image](images/mnist_97/output_5_1.png)
 
 
 
-> ### Plotting train data
+Plotting train data
+---------
 
 ![image](images/mnist_97/output_5_3.png)
 
@@ -188,7 +192,8 @@ homogeneity: 0.906
 
 
 
->  ### Plotting test data
+Plotting test data
+-----------
 
 ![image](images/mnist_97/output_5_5.png)
 

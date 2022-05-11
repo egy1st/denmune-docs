@@ -1,4 +1,4 @@
-Trining MNIST Dataset
+Training MNIST Dataset
 =====================
 
 ``` {.python}
@@ -117,12 +117,16 @@ dm = DenMune(train_data=X_train,
 labels, validity = dm.fit_predict(show_plots=True, show_analyzer=True)
 ```
 
+Dataset; MNIST
+========
 
-### Plotting dataset Groundtruth
+Plotting dataset Groundtruth
+---------
 
 ![image](images/train_mnist/output_5_1.png)
 
-### Plotting train data
+Plotting train data
+---------
 
 ![image](images/train_mnist/output_5_3.png)
 
@@ -137,7 +141,8 @@ merge: 32553 └── validity └── train ├── ACC: 40386 ├── A
 ARI: 0.919 ├── F1: 0.962 ├── NMI: 0.905 ├── completeness: 0.904 └──
 homogeneity: 0.906
 
-### Plotting test data
+Plotting test data
+-----------
 
 ![image](images/train_mnist/output_5_5.png)
 
