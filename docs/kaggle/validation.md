@@ -25,13 +25,13 @@ if not os.path.exists('datasets'):
   !git clone https://github.com/egy1st/datasets
 ```
 
-::: {.parsed-literal}
-Cloning into \'datasets\'\... remote: Enumerating objects: 63, done.\[K
-remote: Counting objects: 100% (63/63), done.\[K remote: Compressing
-objects: 100% (52/52), done.\[K remote: Total 63 (delta 10), reused 59
-(delta 9), pack-reused 0\[K Unpacking objects: 100% (63/63), done.
-Checking out files: 100% (23/23), done.
-:::
+
+
+> Cloning into \'datasets\'\... remote: Enumerating objects: 63, done.\[K
+> remote: Counting objects: 100% (63/63), done.\[K remote: Compressing
+> objects: 100% (52/52), done.\[K remote: Total 63 (delta 10), reused 59
+> (delta 9), pack-reused 0\[K Unpacking objects: 100% (63/63), done.
+> Checking out files: 100% (23/23), done.
 
 You can get your validation results using 3 methods - by showing the
 Analyzer - extract values from the validity returned list from
@@ -63,19 +63,17 @@ dm = DenMune(train_data=X_train,
 labels, validity = dm.fit_predict(show_noise=True, show_analyzer=True)
 ```
 
-::: {.parsed-literal}
-Dataset: aggregation Plotting dataset Groundtruth
-:::
+
+### Dataset: aggregation Plotting dataset Groundtruth
 
 ![image](images/validation/output_5_1.png)
 
-::: {.parsed-literal}
-Plotting train data
-:::
+
+### Plotting train data
 
 ![image](images/validation/output_5_3.png)
 
-::: {.parsed-literal}
+
 Validating train data ├── exec\_time │ ├── DenMune: 0.322 │ ├── NGT:
 0.038 │ └── t\_SNE: 0 ├── n\_clusters │ ├── actual: 7 │ └── detected: 7
 ├── n\_points │ ├── dim: 2 │ ├── noise │ │ ├── type-1: 0 │ │ └── type-2:
@@ -83,7 +81,6 @@ Validating train data ├── exec\_time │ ├── DenMune: 0.322 │ ├�
 ├── all: 296 │ ├── failed to merge: 0 │ └── succeeded to merge: 296 └──
 validity └── train ├── ACC: 785 ├── AMI: 0.988 ├── ARI: 0.993 ├── F1:
 0.996 ├── NMI: 0.988 ├── completeness: 0.987 └── homogeneity: 0.989
-:::
 
 ``` {.python}
 # secondly, we can extract validity returned list from fit_predict function
@@ -92,14 +89,11 @@ labels, validity = dm.fit_predict(show_plots=False, show_noise=True, show_analyz
 validity
 ```
 
-::: {.parsed-literal}
 
-{\'train\': {\'ACC\': 785,
 
-:   \'AMI\': 0.9880984055236919, \'ARI\': 0.9927076502018027, \'F1\':
-    0.9962034083064701, \'NMI\': 0.9882680312048461, \'completeness\':
-    0.9873385166573364, \'homogeneity\': 0.9891992975556994}}
-:::
+>  {\'train\': {\'ACC\': 785, :   \'AMI\': 0.9880984055236919, \'ARI\': 0.9927076502018027, \'F1\':
+>     0.9962034083064701, \'NMI\': 0.9882680312048461, \'completeness\':
+>     0.9873385166573364, \'homogeneity\': 0.9891992975556994}}
 
 ``` {.python}
 Accuracy = validity['train']['ACC']
@@ -118,10 +112,10 @@ ARI = validity['train']['ARI']
 print ('ARI index:', round(ARI*100,2), '%')
 ```
 
-::: {.parsed-literal}
-Accuracy: 785 correctely identified points F1 score: 99.62 % NMI index:
-98.83 % AMI index: 98.81 % ARI index: 99.27 %
-:::
+
+
+> Accuracy: 785 correctly identified points F1 score: 99.62 % NMI index:
+> 98.83 % AMI index: 98.81 % ARI index: 99.27 %
 
 ``` {.python}
 # Third, we can extract extract values from the Analyzer dictionary
@@ -130,20 +124,16 @@ labels, validity = dm.fit_predict(show_plots=False, show_noise=True, show_analyz
 dm.analyzer
 ```
 
-::: {.parsed-literal}
 
-{\'exec\_time\': {\'DenMune\': 0.12747693061828613,
 
-:   \'NGT\': 0.016164064407348633, \'t\_SNE\': 0}, \'n\_clusters\':
-    {\'actual\': 7, \'detected\': 7}, \'n\_points\': {\'dim\': 2,
-    \'noise\': {\'type-1\': 0, \'type-2\': 0}, \'plot\_size\': 788,
-    \'size\': 788, \'strong\': 492, \'weak\': {\'all\': 296, \'failed to
-    merge\': 0, \'succeeded to merge\': 296}}, \'validity\': {\'train\':
-    {\'ACC\': 785, \'AMI\': 0.9880984055236919, \'ARI\':
-    0.9927076502018027, \'F1\': 0.9962034083064701, \'NMI\':
-    0.9882680312048461, \'completeness\': 0.9873385166573364,
-    \'homogeneity\': 0.9891992975556994}}}
-:::
+> {\'exec\_time\': {\'DenMune\': 0.12747693061828613, :   \'NGT\': 0.016164064407348633, \'t\_SNE\': 0}, \'n\_clusters\':     {\'actual\': 7, \'detected\': 7}, \'n\_points\': {\'dim\': 2,
+>     \'noise\': {\'type-1\': 0, \'type-2\': 0}, \'plot\_size\': 788,
+>     \'size\': 788, \'strong\': 492, \'weak\': {\'all\': 296, \'failed to
+>     merge\': 0, \'succeeded to merge\': 296}}, \'validity\': {\'train\':
+>     {\'ACC\': 785, \'AMI\': 0.9880984055236919, \'ARI\':
+>     0.9927076502018027, \'F1\': 0.9962034083064701, \'NMI\':
+>     0.9882680312048461, \'completeness\': 0.9873385166573364,
+>     \'homogeneity\': 0.9891992975556994}}}
 
 ``` {.python}
 Accuracy = dm.analyzer['validity']['train']['ACC']
@@ -162,7 +152,8 @@ ARI = dm.analyzer['validity']['train']['ARI']
 print ('ARI index:', round(ARI*100,2), '%')
 ```
 
-::: {.parsed-literal}
-Accuracy: 785 correctely identified points F1 score: 99.62 % NMI index:
-98.83 % AMI index: 98.81 % ARI index: 99.27 %
-:::
+
+
+> Accuracy: 785 correctly identified points F1 score: 99.62 % NMI index:
+> 98.83 % AMI index: 98.81 % ARI index: 99.27 %
+> 
