@@ -21,7 +21,7 @@ based clustering using mutual nearest neighbors\"
 DOI: <https://doi.org/10.1016/j.patcog.2020.107589>
 
 Source code is maintained at
-<https://github.com/egy1st/denmune-clustering-algorithm>
+<https://github.com/scikit-learn-contrib/denmune-clustering-algorithm>
 :::
 
 User Guide / Tutorials
