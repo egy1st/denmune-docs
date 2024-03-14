@@ -10,14 +10,14 @@ Also, you may use our repo2docker offered by mybinder.org, which encapsulates th
 
 | Test-drive                               | URL                                                          |
 | ---------------------------------------- | ------------------------------------------------------------ |
-| Reproduce our code capsule on Code Ocean | [![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://denmune.egy1st.org/codeocean-capsule) |
-| Use our test-drive on MyBinder           | [![Launch notebook examples in Binder](https://static.mybinder.org/badge_logo.svg)](https://denmune.egy1st.org/mybinder-repo2docker) |
+| Reproduce our code capsule on Code Ocean | [![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://bit.ly/codeocean-capsule) |
+| Use our test-drive on MyBinder           | [![Launch notebook examples in Binder](https://static.mybinder.org/badge_logo.svg)](https://bit.ly/mybinder-repo2docker) |
 
 ## Scientific Work  
 
-| Paper                                                        | Journal                                                      | Data                                                         | ResearchGate Stats                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![Elsevier, journal's article publisher](https://img.shields.io/badge/elsevier-published-orange)](https://denmune.egy1st.org/research-paper) | [![scimagojr](https://www.scimagojr.com/journal_img.php?id=24823)](https://www.scimagojr.com/journalsearch.php?q=24823&tip=sid&clean=0) | [![Research datasets at Mendeley](https://img.shields.io/badge/mendeley-data-bluegreen)](https://denmune.egy1st.org/mendeley-data) | ![ResearchGate Stats](https://raw.githubusercontent.com/egy1st/images/main/clustering/researshgate.png) |
+|                         Paper & data                         |                           Journals                           |                      ResearchGate Stats                      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [![Elsevier, journal's article publisher](https://img.shields.io/badge/elsevier-published-orange)](https://bit.ly/denmune-research-paper)<br />[![Research datasets at Mendeley](https://img.shields.io/badge/mendeley-data-bluegreen)](https://bit.ly/mendeley-data) | [![scimagojr](https://www.scimagojr.com/journal_img.php?id=24823)](https://www.scimagojr.com/journalsearch.php?q=24823&tip=sid&clean=0) [![scimagojr](https://www.scimagojr.com/journal_img.php?id=21101060167)](https://www.scimagojr.com/journalsearch.php?q=21101060167&tip=sid&clean=0) | ![ResearchGate Stats](https://raw.githubusercontent.com/egy1st/images/main/clustering/researshgate.png) |
 
 ## Coding, Security & Maintenance
 
@@ -29,7 +29,7 @@ Also, you may use our repo2docker offered by mybinder.org, which encapsulates th
 
 | Reproducible Capsule                                         | Repo2Docker                                                  | Colab                                                        | Kaggle                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://denmune.egy1st.org/codeocean-capsule) | [![Launch notebook examples in Binder](https://static.mybinder.org/badge_logo.svg)](https://denmune.egy1st.org/mybinder-repo2docker) | [![Launch notebook examples in Colaboratory, Google Research](https://colab.research.google.com/assets/colab-badge.svg)](#colab) | [![Launch notebook examples in Kaggle, the workspace where data scientist meet](https://kaggle.com/static/images/open-in-kaggle.svg)](#kaggle) |
+| [![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://bit.ly/codeocean-capsule) | [![Launch notebook examples in Binder](https://static.mybinder.org/badge_logo.svg)](https://bit.ly/mybinder-repo2docker) | [![Launch notebook examples in Colaboratory, Google Research](https://colab.research.google.com/assets/colab-badge.svg)](#colab) | [![Launch notebook examples in Kaggle, the workspace where data scientist meet](https://kaggle.com/static/images/open-in-kaggle.svg)](#kaggle) |
 
 ## Downloads Stats  
 
@@ -50,7 +50,7 @@ Also, you may use our repo2docker offered by mybinder.org, which encapsulates th
 ## Documentation:
 
    -  [![read the docs](https://img.shields.io/badge/read_the-docs-orange)](https://denmune.readthedocs.io/en/latest/?badge=latest)
-   -  [![Read my docs](https://img.shields.io/badge/read_my-docs-green)](https://docs.egy1st.org)
+   -  [![Read my docs](https://img.shields.io/badge/read_my-docs-green)](https://denmune-docs.vercel.app)
 
 ## Watch it in action
 
@@ -69,11 +69,11 @@ Watch this ***10-min*** illustrative video on:
 
 ## When less means more
 
-Most classic clustering algorithms fail in detecting complex clusters where clusters are of different size, shape, density, and being exist in noisy data. Recently, a density-based algorithm named DenMune showed great ability in detecting complex shapes even in noisy data. it can detect number of clusters automatically, detect both pre-identified-noise and post-identified-noise automatically and removing them.
+Most classic clustering algorithms fail to detect complex clusters where clusters are of different sizes, shapes, density, and exist in noisy data. Recently, a density-based algorithm named DenMune showed great ability in detecting complex shapes even in noisy data. it can detect a number of clusters automatically, detect both pre-identified-noise and post-identified-noise automatically, and remove them.
 
-It can achieve accuracy reach 100% in some classic pattern problems, achieve 97% in MNIST dataset. A great advantage of this algorithm is being single-parameter algorithm. All you need is to set number of k-nearest neighbor and the algorithm will care about the rest. Being Non-sensitive to changes in k, make it robust and stable. 
+It can achieve an accuracy reach 100% in some classic pattern problems, achieve 97% in the MNIST dataset. A great advantage of this algorithm is being a single-parameter algorithm. All you need is to set a number of k-nearest neighbors and the algorithm will care about the rest. Being Non-sensitive to changes in k, make it robust and stable.
 
-Keep in mind, the algorithm reduce any N-D dataset to only 2-D dataset initially, so it is a good benefit of this algorithm is being always to plot your data and explore it which make this algorithm a good candidate for data exploration. Finally, the algorithm comes with neat package for visualizing data, validating it and analyze the whole clustering process.
+Keep in mind, that the algorithm reduces any N-D dataset to only a 2-D dataset initially, so it is a good benefit of this algorithm is always to plot your data and explore it which makes this algorithm a good candidate for data exploration. Finally, the algorithm comes with a neat package for visualizing data, validating it, and analyzing the whole clustering process.
 
 ## How to install DenMune
 
@@ -404,12 +404,9 @@ for snapshot in snapshots:
     labels, validity = dm.fit_predict(show_analyzer=False, show_noise=False)   
 ```
 
-[![Propagation in DenMune](https://raw.githubusercontent.com/egy1st/denmune-clustering-algorithm/main/images/propagation.gif)]()
-
-
 ## Interact with the algorithm  
 
-[![chameleon datasets](https://raw.githubusercontent.com/egy1st/denmune-clustering-algorithm/main/images/chameleon_detection.png)](https://colab.research.google.com/drive/1EUROd6TRwxW3A_XD3KTxL8miL2ias4Ue?usp=sharing)
+[![chameleon datasets](https://raw.githubusercontent.com/scikit-learn-contrib/denmune-clustering-algorithm/main/images/denmune_propagation.png)](https://colab.research.google.com/drive/1EUROd6TRwxW3A_XD3KTxL8miL2ias4Ue?usp=sharing)
 
 *click image to interact*
 
@@ -435,23 +432,38 @@ Here is a list of Google CoLab & Kaggle notebooks to practice the use of the alg
 
 | Dataset                      | CoLab Notebook                                               | Kaggle Notebook                                              |
 | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| How to use it?               | [![How to use it - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/how-to-use) | [![When less means more - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/how-to-use) |
-| Chameleon datasets           | [![Chameleon datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/chameleon) | [![Non-groundtruth datasets](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/chameleon) |
-| 2D Shape datasets            | [![2D Shape datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/2d-shapes) | [![2D Shape datasets - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/2d-shapes) |
-| Clustering unlabeled data    | [![Non-groundtruth datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/unlabeled-data) | [![Non-groundtruth datasets](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/unlabeled-data) |
-| iris dataset                 | [![iris dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/iris-dataset) | [![iris dataset - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/iris-dataset) |
-| MNIST dataset                | [![MNIST dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/mnist-dataset) | [![MNIST dataset - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/mnist-dataset) |
-| Scoring 97% on MNIST dataset | [![Get 97% by training MNIST dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/score-97-mnist) | [![Training MNIST to get 97%](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/score-97-mnist) |
-| Noise detection              | [![Noise detection - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/noise-detection) | [![Noise detection - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/noise-detection) |
-| Validation                   | [![Validation - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/how-to-validate) | [![Validation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/how-to-validate) |
-| How does it propagate?       | [![How it propagates - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/how-propagate) | [![The beauty of propagation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/how-propagate) <br />[![The beauty of propagation part 2 - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/how-propagate-2) |
-| Snapshots of propagation     | [![snapshots of the propagation - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/propagation-shots) | [![The beauty of propagation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/propagation-shots) |
-| Scalability                  | [![Scalability - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/scalability) | [![Scalability - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/scalability) |
-| Stability                    | [![Stability vs number of nearest neighbors - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/stability) | [![Stability - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/stability) |
-| k-nearest-evolution          | [![k-nearest-evolution - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://denmune.egy1st.org/colab/knn-evolution) | [![k-nearest-evolution - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://denmune.egy1st.org/kaggle/knn-evolution) |
+| How to use it?               | [![How to use it - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-how-to-use) | [![When less means more - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-how-to-use) |
+| Chameleon datasets           | [![Chameleon datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-chameleon) | [![Non-groundtruth datasets](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-chameleon) |
+| 2D Shape datasets            | [![2D Shape datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-2d-shapes) | [![2D Shape datasets - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-2d-shapes) |
+| Clustering unlabeled data    | [![Non-groundtruth datasets - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-unlabeled-data) | [![Non-groundtruth datasets](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-chameleon) |
+| iris dataset                 | [![iris dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-iris-dataset) | [![iris dataset - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-iris-dataset) |
+| MNIST dataset                | [![MNIST dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-mnist-dataset) | [![MNIST dataset - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-score-97-mnist) |
+| Scoring 97% on MNIST dataset | [![Get 97% by training MNIST dataset - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-score-97-mnist) | [![Training MNIST to get 97%](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-score-97-mnist) |
+| Noise detection              | [![Noise detection - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-noise-detection) | [![Noise detection - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-noise-detection) |
+| Validation                   | [![Validation - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-how-to-validate) | [![Validation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-how-to-validate) |
+| How does it propagate?       | [![How it propagates - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-how-propagate) | [![The beauty of propagation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-how-propagate) <br />[![The beauty of propagation part 2 - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-how-propagate-2) |
+| Snapshots of propagation     | [![snapshots of the propagation - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-propagation-shots) | [![The beauty of propagation - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-propagation-shots) |
+| Scalability                  | [![Scalability - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-scalability) | [![Scalability - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-scalability) |
+| Stability                    | [![Stability vs number of nearest neighbors - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-stability) | [![Stability - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-stability) |
+| k-nearest-evolution          | [![k-nearest-evolution - colab](https://colab.research.google.com/assets/colab-badge.svg)](https://bit.ly/colab-knn-evolution) | [![k-nearest-evolution - kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://bit.ly/kaggle-knn-evolution) |
+
+
+
+## Software Impact
+Discover robust clustering without density cutoffs using this open-source Python library pyMune, implementing the parameter-free DenMune algorithm. PyMune identifies and expands cluster cores while removing noise. Fully scikit-learn compatible. pyMune (DenMune implementation) is a cutting-edge tool incorporating advanced techniques, robust performance, and effective propagation strategies. This positions it as the current state-of-the-art in its field, contributing to its high adoption and impact.
+
+- After extensive research and rigorous validation, we are proud to release pyMune as an open-source tool on GitHub and PyPi for the benefit of the scientific community.
+- With over 200,000 downloads already, pyMune has demonstrated its real-world impact and usefulness. We integrated it with [![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://bit.ly/codeocean-capsule) and [![Launch notebook examples in Binder](https://static.mybinder.org/badge_logo.svg)](https://bit.ly/mybinder-repo2docker) to further enhance reproducibility and reuse - encapsulating code, data, and outputs for turnkey sharing.
+- It is part of a special issue of R-badged articles, https://www.sciencedirect.com/journal/software-impacts/special-issue/10XXN6LQ0J1
+- it is part of Scikit-learn-contrib , https://github.com/scikit-learn-contrib
+
+![Software Impact](https://github.com/egy1st/images/blob/main/clustering/software-impacts.png?raw=true)
 
 
 ## How to cite
+
+- How to cite ***The paper***
+
 If you have used this codebase in a scientific publication and wish to cite it, please use the [Journal of Pattern Recognition article](https://www.sciencedirect.com/science/article/abs/pii/S0031320320303927):
 
 ```
@@ -476,6 +488,32 @@ abstract = {Many clustering algorithms fail when clusters are of arbitrary shape
 }
 ```
 
+
+
+
+
+- How to cite ***The Software***
+If you have used this codebase in a scientific publication and wish to cite it, please use the [Journal of Software Impacts article](https://www.sciencedirect.com/science/article/pii/S266596382300101X):
+
+```
+Abbas, M. A., El-Zoghabi, A., & Shoukry, A. (2023). PyMune: A Python package for complex clusters detection. Software Impacts, 17, 100564. https://doi.org/10.1016/j.simpa.2023.100564
+```
+
+```bib  
+@article{ABBAS2023100564,
+title = {pyMune: A Python package for complex clusters detection},
+journal = {Software Impacts},
+volume = {17},
+pages = {100564},
+year = {2023},
+issn = {2665-9638},
+doi = {https://doi.org/10.1016/j.simpa.2023.100564},
+url = {https://www.sciencedirect.com/science/article/pii/S266596382300101X},
+author = {Mohamed Ali Abbas and Adel El-Zoghabi and Amin Shoukry},
+keywords = {Machine learning, Pattern recognition, Dimensionality reduction, Mutual nearest neighbors, Nearest neighbors approximation, DenMune},
+abstract = {We introduce pyMune, an open-source Python library for robust clustering of complex real-world datasets without density cutoff parameters. It implements DenMune (Abbas et al., 2021), a mutual nearest neighbor algorithm that uses dimensionality reduction and approximate nearest neighbor search to identify and expand cluster cores. Noise is removed with a mutual nearest-neighbor voting system. In addition to clustering, pyMune provides classification, visualization, and validation functionalities. It is fully compatible with scikit-learn and has been accepted into the scikit-learn-contrib repository. The code, documentation, and demos are available on GitHub, PyPi, and CodeOcean for easy use and reproducibility.}
+}
+```
 ## Licensing 
 
 The DenMune algorithm is 3-clause BSD licensed. Enjoy.
@@ -495,5 +533,5 @@ The DenMune algorithm is 3-clause BSD licensed. Enjoy.
   - [x] creating unit tests (coverage: 100%)
   - [x] generating API documentation
   - [x] Create a reproducible capsule on code ocean
-  - [x] Submitting pyMune to Software Impacts (accepted, in press)
+  - [x] Submitting pyMune to Software Impacts (Published August 5 , 2023)
   - [ ] create conda package (*postponed until NGT has conda installation*)
